@@ -25,6 +25,161 @@
       integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
       crossorigin="anonymous"
     ></script>
+    <script defer src="app.js"></script>
   </head>
-  <body></body>
+  <body>
+    <main
+      class="d-flex flex-column align-items-center justify-content-center container-fluid bg-danger"
+    >
+      <div class="form-container w-100">
+        <div class="btn btn-primary btn-block purple mb-2 w-100">
+          Try it free 7 days then $20/mo. thereafter
+        </div>
+
+        <div class="w-100 bg-light p-4 rounded">
+          <form
+            class="form-row needs-validation d-flex flex-column gap-2"
+            novalidate
+          >
+            <!-- show alert -->
+            <div id="liveAlertPlaceholder"></div>
+
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom01"
+              placeholder="firstname"
+              required
+            />
+            <div class="invalid-feedback">Error !</div>
+            <input
+              type="text"
+              class="form-control"
+              id="validationCustom01"
+              placeholder="lastname"
+              required
+            />
+            <div class="invalid-feedback">Error !</div>
+            <input
+              type="email"
+              class="form-control"
+              id="validationCustom01"
+              placeholder="email"
+              required
+            />
+            <div class="invalid-feedback">Error !</div>
+            <input
+              type="password"
+              class="form-control"
+              id="validationCustom01"
+              placeholder="password"
+              required
+            />
+            <div class="invalid-feedback">Error !</div>
+
+            <button
+              type="submit"
+              id="liveAlertBtn"
+              class="btn btn-success butt"
+            >
+              Submit
+            </button>
+
+            <p class="text-center text-sm termtext text-secondary">
+              By clicking the button you are agreeing to our
+              <span
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                class="text-danger"
+                >Terms and service</span
+              >
+            </p>
+          </form>
+          <div
+            class="modal fade"
+            id="exampleModal"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="exampleModalLabel">
+                    Modal title
+                  </h1>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body">"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modal -->
+
+    <!-- Button trigger modal -->
+    <!-- <script>
+      const alertPlaceholder = document.getElementById("liveAlertPlaceholder");
+      const appendAlert = (message, type) => {
+        const wrapper = document.createElement("div");
+        wrapper.innerHTML = [
+          `<div class="alert alert-${type} alert-dismissible" role="alert">`,
+          `   <div>${message}</div>`,
+          '   <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>',
+          "</div>",
+        ].join("");
+
+        alertPlaceholder.append(wrapper);
+      };
+
+      const alertTrigger = document.getElementById("liveAlertBtn");
+      if (alertTrigger) {
+        alertTrigger.addEventListener("click", () => {
+          appendAlert("put info pleases", "success");
+        });
+      }
+      (() => {
+        "use strict";
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll(".needs-validation");
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach((form) => {
+          form.addEventListener(
+            "submit",
+            (event) => {
+              if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+
+              form.classList.add("was-validated");
+            },
+            false
+          );
+        });
+      })();
+    </script> -->
+  </body>
 </html>
